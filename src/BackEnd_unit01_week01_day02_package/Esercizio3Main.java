@@ -19,9 +19,24 @@ public class Esercizio3Main {
 		Esercizio3Cliente cliente2 = new Esercizio3Cliente(102, "paolo", "bianchi", "paolo.bianchi@mail.com", "20 Maggio 2021");
 		Esercizio3Cliente cliente3 = new Esercizio3Cliente(103, "pippo", "baudo", "pippo.baudo@mail.com", "30 Giugno 2022");
 		
+		Esercizio3Articolo[] arrayCarrello1 = new Esercizio3Articolo[2];
+		// arrayCarrello1[0] = {1, "articolo1", 10, 100};
+		//arrayCarrello1[1] = "stringa2";
+				
 		
 		
-		//Esercizio3Carrello carrello1 = new Esercizio3Carrello(101, "pippo", "baudo", "pippo.baudo@mail.com", "30 Giugno 2022");
+		//String[] myArray = new String[5];
+		//myArray[0] = "stringa1";
+		//myArray[1] = "stringa2";
+		//myArray[2] = "stringa3";
+		//myArray[3] = "stringa4";
+		//myArray[4] = "stringa5";
+		
+		
+		//Esercizio3Carrello carrello1 = new Esercizio3Carrello(101,);
+		//Esercizio3Carrello carrello2 = new Esercizio3Carrello(102,);
+		//Esercizio3Carrello carrello3 = new Esercizio3Carrello(103,);
+
 		
 		//int codiceCliente;
 		//Esercizio3Articolo[] elencoArticoli;
