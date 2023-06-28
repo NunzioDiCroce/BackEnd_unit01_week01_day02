@@ -59,6 +59,8 @@ public class Esercizio3Main {
 				+ carrello.elencoArticoli[0].codiceArticolo + ", " + carrello.elencoArticoli[1].codiceArticolo + ", "
 				+ carrello.elencoArticoli[2].codiceArticolo + " | Totale: " + carrello.totaleCostoArticoli + "€");
 
+		esercizioTre.close();
+
 	}
 
 }
