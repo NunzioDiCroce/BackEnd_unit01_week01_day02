@@ -1,49 +1,64 @@
 package BackEnd_unit01_week01_day02_package;
 
+import java.util.Scanner;
+
 public class Esercizio3Main {
-	
+
 	// main
 	public static void main(String[] args) {
-		
+
 		// - - - - - - - - - - ESERCIZIO 3 - - - - - - - - - -
 		System.out.println("");
 		System.out.println("- - - - - - - - - - ESERCIZIO 3 - - - - - - - - - -");
-		
-		Esercizio3Articolo articolo1 = new Esercizio3Articolo(1, "articolo1", 10, 100);
-		Esercizio3Articolo articolo2 = new Esercizio3Articolo(2, "articolo1", 20, 200);
-		Esercizio3Articolo articolo3 = new Esercizio3Articolo(3, "articolo1", 30, 300);
-		Esercizio3Articolo articolo4 = new Esercizio3Articolo(4, "articolo1", 40, 400);
-		Esercizio3Articolo articolo5 = new Esercizio3Articolo(5, "articolo1", 50, 500);
-	
-		Esercizio3Cliente cliente1 = new Esercizio3Cliente(101, "mario", "rossi", "mario.rossi@mail.com", "10 Aprile 2020");
-		Esercizio3Cliente cliente2 = new Esercizio3Cliente(102, "paolo", "bianchi", "paolo.bianchi@mail.com", "20 Maggio 2021");
-		Esercizio3Cliente cliente3 = new Esercizio3Cliente(103, "pippo", "baudo", "pippo.baudo@mail.com", "30 Giugno 2022");
-		
-		Esercizio3Articolo[] arrayCarrello1 = new Esercizio3Articolo[2];
-		// arrayCarrello1[0] = {1, "articolo1", 10, 100};
-		//arrayCarrello1[1] = "stringa2";
-				
-		
-		
-		//String[] myArray = new String[5];
-		//myArray[0] = "stringa1";
-		//myArray[1] = "stringa2";
-		//myArray[2] = "stringa3";
-		//myArray[3] = "stringa4";
-		//myArray[4] = "stringa5";
-		
-		
-		//Esercizio3Carrello carrello1 = new Esercizio3Carrello(101,);
-		//Esercizio3Carrello carrello2 = new Esercizio3Carrello(102,);
-		//Esercizio3Carrello carrello3 = new Esercizio3Carrello(103,);
 
-		
-		//int codiceCliente;
-		//Esercizio3Articolo[] elencoArticoli;
-		//int totaleCostoArticoli;
-		
-		
-		
+		System.out.println("Inserire dati cliente");
+
+		Scanner esercizioTre = new Scanner(System.in);
+
+		System.out.println("Nome");
+		String nome = esercizioTre.nextLine();
+		System.out.println("Cognome");
+		String cognome = esercizioTre.nextLine();
+		System.out.println("Mail");
+		String mail = esercizioTre.nextLine();
+
+		String codiceCliente = "000112233";
+		String data = "28 Giugno 2023";
+
+		Esercizio3Cliente cliente = new Esercizio3Cliente(codiceCliente, nome, cognome, mail, data);
+
+		System.out.println("");
+		System.out.println("Gentile " + cliente.nomeCliente + " " + cliente.cognomeCliente + " ( mail: "
+				+ cliente.mailCliente + " )" + " seleziona 3 articoli");
+		System.out.println("");
+
+		System.out.println("Codice primo articolo");
+		String codice1 = esercizioTre.nextLine();
+		String descrizione1 = "Questo è un articolo";
+		double prezzo1 = 100.00;
+		System.out.println("Codice secondo articolo");
+		String codice2 = esercizioTre.nextLine();
+		String descrizione2 = "Questo è un articolo";
+		double prezzo2 = 150.55;
+		System.out.println("Codice terzo articolo");
+		String codice3 = esercizioTre.nextLine();
+		String descrizione3 = "Questo è un articolo";
+		double prezzo3 = 180.88;
+
+		Esercizio3Articolo[] arrayArticoli = new Esercizio3Articolo[3];
+		arrayArticoli[0] = new Esercizio3Articolo(codice1, descrizione1, prezzo1);
+		arrayArticoli[1] = new Esercizio3Articolo(codice2, descrizione2, prezzo2);
+		arrayArticoli[2] = new Esercizio3Articolo(codice3, descrizione3, prezzo3);
+		double sommaPrezzo = arrayArticoli[0].prezzoArticolo + arrayArticoli[1].prezzoArticolo
+				+ arrayArticoli[2].prezzoArticolo;
+
+		Esercizio3Carrello carrello = new Esercizio3Carrello(codiceCliente, arrayArticoli, sommaPrezzo);
+
+		System.out.println("");
+		System.out.println("Codice cliente: " + carrello.codiceCliente + " | Articoli selezionati: "
+				+ carrello.elencoArticoli[0].codiceArticolo + ", " + carrello.elencoArticoli[1].codiceArticolo + ", "
+				+ carrello.elencoArticoli[2].codiceArticolo + " | Totale: " + carrello.totaleCostoArticoli + "€");
+
 	}
 
 }

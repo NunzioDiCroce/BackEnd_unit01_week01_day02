@@ -1,18 +1,18 @@
 package BackEnd_unit01_week01_day02_package;
 
 public class Esercizio3Carrello {
-	
+
 	// proprietà
-	int codiceCliente;
+	String codiceCliente;
 	Esercizio3Articolo[] elencoArticoli;
-	int totaleCostoArticoli;
-	
+	double totaleCostoArticoli;
+
 	// costruttore
-	public Esercizio3Carrello(int _codiceCliente, Esercizio3Articolo[] _elencoArticoli, int _totaleCostoArticoli) {
+	public Esercizio3Carrello(String _codiceCliente, Esercizio3Articolo[] _elencoArticoli,
+			double _totaleCostoArticoli) {
 		this.codiceCliente = _codiceCliente;
 		this.elencoArticoli = _elencoArticoli;
 		this.totaleCostoArticoli = _totaleCostoArticoli;
 	}
-	
-	
+
 }
